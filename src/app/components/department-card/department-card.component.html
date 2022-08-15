@@ -1,0 +1,10 @@
+    <div class="card" style="width: 20rem;">
+        <img [src]="department.imageUrl" alt="">
+        <div class="card-body">
+            <div class="card-title"> {{department.name}} </div>
+            <div class="card-text"> {{department.description}} </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-block btn-primary my-1" (click)="onShowAppointmentClick()">Show Appointment</button>
+        </div>
+    </div>

@@ -1,0 +1,31 @@
+
+<h1 class="text-center my-2">Appointments</h1>
+<button class="btn btn-primary my-3">Add Appointment</button>
+<table class="table table-striped my-5 fs-5">
+    <thead>
+      <tr>
+        <th scope="col">Department Name</th>
+        <th scope="col">Appointment Date</th>
+        <th scope="col">Statues</th>
+        <th scope="col">Option</th>
+      </tr>
+    </thead>
+    <tbody>
+  
+      <tr *ngFor="let appointment of appointments">
+        <td > {{ appointment.department_name}}</td>
+        <td > {{ appointment.appointment_date}}</td>
+
+        <td *ngIf="appointment.taken" class="bg-secondary">Taken</td>
+        <td *ngIf="!appointment.taken" class="bg-success">Not Taken</td>
+
+       <td>
+        <button class="btn btn-danger mx-2">Delete</button>
+        <button class="btn btn-warning">Edit</button>
+       </td>
+
+      </tr>
+  
+    </tbody>
+  </table>
+  
